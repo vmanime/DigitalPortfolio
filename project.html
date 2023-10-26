@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VM Cars</title>
+   <style>.navbar{
+    background: teal;
+    margin-left: 2px;
+    overflow: hidden;
+}
+.navbar a{
+    padding: 16px 30px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    display: block;
+    float: left;
+}
+.navbar a:hover{
+    background: #fff;
+    color: blue;
+}
+
+.head h1{
+    text-align: center;
+    font-family: verdana;
+    font-size: 60px;
+    color: teal;
+}
+.head p{
+    text-align: center;
+    font-family: verdana;
+    font-size: 25px;
+}
+.head h4{
+    text-align: center;
+    font-family: verdana;
+    font-size: 40px;
+}
+.head2{
+    display: block;
+    padding: 0px;
+    background-color: teal;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.con{
+    padding-left: 20px;
+    background-color: #4C5958;
+    color: #fff;
+    margin-left: 10px;
+    display: flex;
+    justify-content:space-between;
+}
+.c h3{
+    color: beige;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.bottom{
+    text-align: center;
+    background-color: teal;
+    color: #fff;
+    margin-left: 10px;
+}
+</style>
+</head>
+<body id="mypage">
+    <nav>
+        <div class='navbar'>
+         <a href="#home">Home</a>
+         <a href="#buycar">Buy A Car</a>
+         <a href="#insurance">Insurance</a>
+         <a href="#contact">Contact</a>
+         </div> 
+        </nav>      
+
+    <br><br>
+    <div class="head">
+        <h1><b>VM CARS</b></h1>
+        <p>Used Cars Buying And Selling</p>
+        <h4>Easy Finance Arrangement & Insurance Renewal</h4>
+    </div>
+
+    <div>
+        <img src="car.jpeg" alt="sample" style="width:100%;min-height:450px;max-height:500px;">
+        <br><br>
+        <div class="head2">  
+        <p>CARS FOR YOU</p>
+          </div>
+    </div>
+
+    <div>
+        <div class="row" id="buycar"><br>
+            <div class="q">
+                <h3> Buy Your Car  </h3>
+                <img src="buy.png" alt="buy" style="width:300px" "height:200px">
+                <p>We sell cars...
+                </p>
+            </div>   
+                
+            <div class="q" id="insurance">
+                <h3>Insurance</h3>
+                <img src="insur.jpg" alt="insurance" style="width:300px" "height:300px%">
+                <p>We provide insurance...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="con" id="contact">
+        <div class="c">
+            <h3>Contact Us</h3>
+            <p>48, West Street,<br>
+            Tiruchendur,
+            Tuticorin.<br>Tamil Nadu-628 215.<br>
+            PH: 99977 88999 <br>Email: vmcars@gmail.com<br>
+            Website: www.vmcars.com</p>
+        </div>
+        <br><br>
+        <div class="c">
+            <div>
+                <img src="contact.jpeg" alt="contact" style="width:60%">
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <h2>copyrights VM Cars</h2>
+    </div>
+   <script>
+    document.querySelectorAll('a[herf^="#"]').forEach(anchor=>{
+        anchor.addEventListener('click',function(e){
+            e.preventDefault();
+            const targetId=this.getAttribute('href').substring(1);
+            const targetElement=document.getElementById(targetId);
+            if(targetElement){
+                window.scrollTo({
+                    top:targetElement.offsetTop,
+                    bahavior:'smooth'
+                });
+            }
+        });
+    });
+   </script>         
+</body>
+</html>
